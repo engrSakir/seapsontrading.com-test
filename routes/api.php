@@ -20,3 +20,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::post('/login', 'ApiTokenController@login');    //Login
 Route::get('/logout',  'ApiTokenController@logout')->middleware(['auth:api']);    //logout
 Route::post('/registration',  'ApiTokenController@registration');  //Registration
+
+// Route::get('/wallet-balance',  'ApiTokenController@walletBalance')->middleware(['auth:api']);    //walletBalance
+Route::get('/wallet-balance',  'ApiTokenController@walletBalance');    //walletBalance
